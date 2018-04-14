@@ -1,0 +1,19 @@
+public boolean verifyData(Data data){
+
+SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy" locale.Brazil);
+	sdf.parse(data);
+
+	if(data == null){
+		return false;
+
+	}
+	return true;
+
+
+}
+
+
+if(!verifyData){
+System.out.print("data incorreta");
+}
+
