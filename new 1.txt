@@ -1,19 +1,19 @@
-public boolean verifyData(Data data){
+public String formatDate(Date data){
 
-SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy" locale.Brazil);
-	sdf.parse(data);
-
-	if(data == null){
-		return false;
-
+	String formatedDate = "";
+	
+	if (data == null) {
+		return formatedDate;
 	}
-	return true;
-
-
+	
+	try {
+		formatedDate = new SimpleDateFormat("dd/MM/yyyy" locale.Brazil).format(data);
+	} catch(Exception e) {
+		log.warn("invalid date", e);
+	}
+	
+	return formatedDate;
 }
 
 
-if(!verifyData){
-System.out.print("data incorreta");
-}
 
